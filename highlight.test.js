@@ -1,0 +1,5 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const {highlightCodeHTML}=require('./index');
+test('JSON highlights strings, attributes and literals with inline colors',()=>{const html=highlightCodeHTML('{"enabled":true,"count":42}','json');assert.match(html,/color:#93C5FD/);assert.match(html,/color:#FDBA74/);assert.doesNotMatch(html,/class=/);});
+test('unknown language escapes HTML and keeps whitespace',()=>assert.equal(highlightCodeHTML('<img src=x>\n  & "x"','unknown'),'&lt;img src=x&gt;\n  &amp; &quot;x&quot;'));
+test('registered languages cannot introduce executable markup',()=>{for(const lang of ['js','typescript','json','bash','python','css','html','sql','java','go','rust','yaml']){const html=highlightCodeHTML('<script>alert(1)</script>\n  123',lang);assert.doesNotMatch(html,/<script>/);assert.match(html,/\n  /);assert.doesNotMatch(html,/<span(?! style="color:#[A-F0-9]{6}">)/);}});
+test('oversized code bypasses grammar execution',()=>assert.equal(highlightCodeHTML('x'.repeat(20001),'js'),'x'.repeat(20001)));

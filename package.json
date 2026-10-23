@@ -1,0 +1,25 @@
+{
+  "name": "@neatico/code-highlight",
+  "version": "0.1.1",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "highlight.js": "11.11.1"
+  }
+}
