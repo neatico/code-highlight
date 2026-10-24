@@ -1,6 +1,7 @@
 {
   "name": "@neatico/code-highlight",
   "version": "0.1.1",
+  "description": "Deterministic syntax highlighting helpers for Neatico visual and code blocks.",
   "type": "commonjs",
   "main": "index.js",
   "types": "index.d.ts",
@@ -13,12 +14,26 @@
   "files": [
     "index.js",
     "index.d.ts",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "test": "node --test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neatico/code-highlight.git"
+  },
+  "homepage": "https://www.neatico.com",
+  "bugs": {
+    "url": "https://github.com/neatico/code-highlight/issues"
+  },
+  "author": "PowerDuckie",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "highlight.js": "11.11.1"
   }
