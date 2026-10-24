@@ -1,6 +1,6 @@
 {
   "name": "@neatico/code-highlight",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Deterministic syntax highlighting helpers for Neatico visual and code blocks.",
   "type": "commonjs",
   "main": "index.js",
